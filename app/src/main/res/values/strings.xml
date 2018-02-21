@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Mavs Bazaar</string>
+    <string name="title_activity_leave_club">LeaveClub</string>
+    <string-array name="C">
+        <item>Please Select a Value</item>
+        <item>Create Club</item>
+        <item>Join Club</item>
+        <item>Leave Club</item>
+    </string-array>
+
+    <string-array name="M">
+        <item>Please Select a Value</item>
+        <item>Buy</item>
+        <item>Sell</item>
+        <item>Lend</item>
+        <item>Exchange</item>
+    </string-array>
+</resources>
