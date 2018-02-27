@@ -43,6 +43,7 @@
         android:layout_alignParentEnd="true" />
 
     <EditText
+        android:text="Abc1234567"
         android:id="@+id/passwordinput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -58,6 +59,7 @@
         tools:layout_editor_absoluteY="234dp" />
 
         <EditText
+            android:text="indrajeet@mavs.uta.edu"
             android:id="@+id/mavsidinput"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
