@@ -239,7 +239,7 @@ public class Register extends AppCompatActivity {
 
 
             }
-            Toast.makeText(Register.this, ""+result, Toast.LENGTH_LONG).show();
+            Toast.makeText(Register.this, "Login Successfull", Toast.LENGTH_LONG).show();
         }
 
     }

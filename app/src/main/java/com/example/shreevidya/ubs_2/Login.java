@@ -41,15 +41,8 @@ import java.util.HashMap;
 public class Login extends AppCompatActivity {
 
 
-    String PasswordHolder, EmailHolder;
-    String finalResult ;
-    String HttpURL = "https://utauniversitybazaar.000webhostapp.com/api/UserLoginCheck.php";
-    Boolean CheckEditText ;
-    ProgressDialog progressDialog;
-    HashMap<String,String> hashMap = new HashMap<>();
-
-    public static final String UserEmail = "";
     EditText mavidinput;
+    boolean internetdownflag = false;
     EditText password;
 
     @Override
@@ -74,7 +67,6 @@ public class Login extends AppCompatActivity {
                 }
                 else {
 
-                    Toast.makeText(Login.this, ""+mavidinput.getText().toString()+ password.getText().toString()+"", Toast.LENGTH_LONG).show();
                     new AsyncLogin().execute(mavidinput.getText().toString(), password.getText().toString());
 
                 }
@@ -204,19 +196,8 @@ public class Login extends AppCompatActivity {
                 use sharedPreferences of Android. and logout button to clear sharedPreferences.
                  */
 
+                   successlogin();
 
-
-
-                SharedPreferences saved_values = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-                SharedPreferences.Editor editor=saved_values.edit();
-                editor.putString("usernamekey",mavidinput.getText().toString());
-                editor.commit();
-
-
-
-                startActivity(new Intent(Login.this, Homepage.class));
-
-                finish();
 
 
             }else if (result.equalsIgnoreCase("Invalid Username or Password Please Try Again ")){
@@ -227,9 +208,30 @@ public class Login extends AppCompatActivity {
             } else if (result.equalsIgnoreCase("exception") || result.equalsIgnoreCase("Check Again")) {
 
                 Toast.makeText(Login.this, "OOPs! Something went wrong. Connection Problem.", Toast.LENGTH_LONG).show();
+                if(internetdownflag)
+                {
 
+                    successlogin();
+                }
             }
         }
+
+    }
+
+    public void successlogin()
+    {
+
+
+        SharedPreferences saved_values = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences.Editor editor=saved_values.edit();
+        editor.putString("usernamekey",mavidinput.getText().toString());
+        editor.commit();
+
+
+
+        startActivity(new Intent(Login.this, Homepage.class));
+
+        finish();
 
     }
 

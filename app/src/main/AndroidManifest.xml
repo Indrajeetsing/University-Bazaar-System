@@ -29,7 +29,8 @@
         <activity android:name=".Sell" />
         <activity android:name=".Lend" />
         <activity android:name=".Exchange" />
-        <activity android:name=".ViewClub"></activity>
+        <activity android:name=".ViewClub" />
+        <activity android:name=".joinedClub"></activity>
     </application>
 
 </manifest>
