@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.shreevidya.ubs_2">
+    package="com.example.shreevidya.universitybazaar">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Login">
+        <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,18 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".Register" />
-        <activity android:name=".Homepage" />
-        <activity android:name=".Announcement" />
-        <activity android:name=".CreateClub" />
-        <activity android:name=".JoinClub" />
-        <activity android:name=".Message" />
-        <activity android:name=".Buy" />
-        <activity android:name=".Sell" />
-        <activity android:name=".Lend" />
-        <activity android:name=".Exchange" />
-        <activity android:name=".ViewClub" />
-        <activity android:name=".joinedClub"></activity>
+        <activity android:name=".AccountActivity.Login" />
+        <activity android:name=".AccountActivity.Register"></activity>
     </application>
 
 </manifest>
